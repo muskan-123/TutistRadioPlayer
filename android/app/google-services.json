@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "270111838625",
+    "firebase_url": "https://braingame-f30b3.firebaseio.com",
+    "project_id": "braingame-f30b3",
+    "storage_bucket": "braingame-f30b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270111838625:android:f8ad84feeb36b5bad7bbe0",
+        "android_client_info": {
+          "package_name": "com.rsgames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270111838625-337vvjp503mf7157803hhvakap8ngl7p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC67SAdiWPUftcxWIK-DOXRLjhY8rDT6dc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270111838625-337vvjp503mf7157803hhvakap8ngl7p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "270111838625-3i13keptsev9kjbutu8lpq0bsplvdasu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.name.RSGames"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

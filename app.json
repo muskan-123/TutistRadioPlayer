@@ -1,0 +1,27 @@
+{
+  "name": "Wallet360",
+  "displayName": "Wallet360",
+  "expo": {
+    "name": "Wallet360",
+    "slug": "Wallet360",
+    "version": "1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/matka360.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "entryPoint": "node_modules/expo/AppEntry.js"
+  }
+}
