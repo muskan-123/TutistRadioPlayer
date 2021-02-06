@@ -1,12 +1,12 @@
-import React, { useReducer, useEffect, useRef } from "react";
-import { TextInput, View, StyleSheet, Text } from "react-native";
-import Validation from "../../Screens/Auth/Validation";
+import React, {useReducer, useEffect, useRef} from 'react';
+import {TextInput, View, StyleSheet, Text} from 'react-native';
+import Validation from '../../Screens/Auth/Validation';
 //** Import constant Files **/
-import Constants from "../../Constants/constant";
-import constant from "../../Constants/constant";
+import Constants from '../../Constants/constant';
+import constant from '../../Constants/constant';
 
-const INPUT_CHANGE = "INPUT_CHANGE";
-const ON_BLUR = "ON_BLUR";
+const INPUT_CHANGE = 'INPUT_CHANGE';
+const ON_BLUR = 'ON_BLUR';
 
 const inputReducer = (state, action) => {
   switch (action.type) {
@@ -28,7 +28,7 @@ const FloatingComponents = (props) => {
   const textInput = useRef();
 
   const [updatedState, dispatch] = useReducer(inputReducer, {
-    value: "",
+    value: '',
     validity: false,
     onblur: false,
   });
@@ -79,13 +79,15 @@ const FloatingComponents = (props) => {
 
   return (
     <View>
-      <View style={{ ...styles.textContainer, ...style }}>
+      <View style={{...styles.textContainer, ...style}}>
         <View style={styles.iconContainer}>{icon}</View>
         <TextInput
           style={styles.textInput}
           ref={textRef}
           {...props}
           keyboardType={keyboardType}
+          defaultValue={props.defaultValue}
+          value={props.value}
           autoCorrect={false}
           enablesReturnKeyAutomatically={true}
           secureTextEntry={password}
@@ -108,25 +110,25 @@ const FloatingComponents = (props) => {
 
 const styles = StyleSheet.create({
   textContainer: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     paddingHorizontal: 10,
-    width: "90%",
+    width: '90%',
     // maxWidth: 332,
     height: 44,
     marginVertical: 5,
     borderWidth: 1,
     borderColor: Constants.Colors.grey,
     borderRadius: 25,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
   },
   textInput: {
     flex: 1,
-    height: "100%",
+    height: '100%',
     paddingHorizontal: 10,
     fontSize: constant.Fonts.Size.subTitle,
     fontFamily: Constants.Fonts.FontFamily.regular,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
     color: constant.Colors.primary,
   },
   errorText: {
@@ -134,11 +136,11 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   iconContainer: {
-    height: "100%",
-    width: "auto",
+    height: '100%',
+    width: 'auto',
     aspectRatio: 1 / 2,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 

@@ -1,138 +1,141 @@
-import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import {createStackNavigator} from '@react-navigation/stack';
 
 //****** Here We Import All Screen Components ******
 import LoginScreen, {
   screenOptions as LoginScreenOptions,
-} from "../Screens/Auth/Login.js";
+} from '../Screens/Auth/Login.js';
 import VerifyOtp, {
   screenOptions as VerifyOtpOptions,
-} from "../Screens/Auth/VerifyOtp.js";
+} from '../Screens/Auth/VerifyOtp.js';
 import NotificationScreen, {
   screenOptions as NotificationScreenOptions,
-} from "../Screens/Dashboard/NotificationScreen";
+} from '../Screens/Dashboard/NotificationScreen';
 import RecoverCredentials, {
   screenOptions as RecoverCredentialsOptions,
-} from "../Screens/Auth/RecoverCredenttials.js";
+} from '../Screens/Auth/RecoverCredenttials.js';
 import GameDashboard, {
   screenOptions as GameDashboardOptions,
-} from "../Screens/Dashboard/GameDashboard";
+} from '../Screens/Dashboard/GameDashboard';
 import AllGamesDashboard, {
   screenOptions as AllGamesDashboardOptions,
-} from "../Screens/Dashboard/AllGamesDashboard";
+} from '../Screens/Dashboard/AllGamesDashboard';
 import LoginWithMPIN, {
   screenOptions as LoginWithMPINOptions,
-} from "../Screens/Auth/LoginWithMPIN.js";
+} from '../Screens/Auth/LoginWithMPIN.js';
 import GenerateMpin, {
   screenOptions as GenerateMpinOptions,
-} from "../Screens/Profile/GenerateMpin";
+} from '../Screens/Profile/GenerateMpin';
 import playScreen, {
   screenOptions as UpdateMpinOptions,
-} from "../Screens/Profile/playScreen";
+} from '../Screens/Profile/playScreen';
 import WalletScreen, {
   screenOptions as WalletOptions,
-} from "../Screens/Wallet/Wallet.js";
+} from '../Screens/Wallet/Wallet.js';
 import FundRequestScreen, {
   screenOptions as FundRequestOptions,
-} from "../Screens/Common/FundRequestHistory.js";
+} from '../Screens/Common/FundRequestHistory.js';
 import WinningHistoryScreen, {
   screenOptions as WinningHistoryOptions,
-} from "../Screens/Wallet/winnigHistory.js";
+} from '../Screens/Wallet/winnigHistory.js';
 import AddFundsScreen, {
   screenOptions as AddFundsOptions,
-} from "../Screens/Wallet/AddFunds.js";
+} from '../Screens/Wallet/AddFunds.js';
+import PaymentModal, {
+  screenOptions as PaymentModalOptions,
+} from '../Screens/Wallet/PaymentModal';
 import WithdrawScreen, {
   screenOptions as WithdrawOptions,
-} from "../Screens/Wallet/Withdraw.js";
+} from '../Screens/Wallet/Withdraw.js';
 import EvenOddGame, {
   screenOptions as EvenOddGameOptions,
-} from "../Screens/Dashboard/EvenOddGame";
+} from '../Screens/Dashboard/EvenOddGame';
 import FigureGame, {
   screenOptions as FigureGameOptions,
-} from "../Screens/Dashboard/FigureGame";
+} from '../Screens/Dashboard/FigureGame';
 import JodiGame, {
   screenOptions as JodiGameOptions,
-} from "../Screens/Dashboard/JodiGame";
+} from '../Screens/Dashboard/JodiGame';
 import DoublePanna, {
   screenOptions as DoublePannaOptions,
-} from "../Screens/Dashboard/DoublePanna";
+} from '../Screens/Dashboard/DoublePanna';
 import TriplePanna, {
   screenOptions as TriplePannaOptions,
-} from "../Screens/Dashboard/TriplePanna";
+} from '../Screens/Dashboard/TriplePanna';
 import ChoicePanna, {
   screenOptions as ChoicePannaOptions,
-} from "../Screens/Dashboard/ChoicePanna";
+} from '../Screens/Dashboard/ChoicePanna';
 import SinglePanna, {
   screenOptions as SinglePannaOptions,
-} from "../Screens/Dashboard/SinglePanna";
+} from '../Screens/Dashboard/SinglePanna';
 import SPMotor, {
   screenOptions as SPMotorOptions,
-} from "../Screens/Dashboard/SPMotor";
+} from '../Screens/Dashboard/SPMotor';
 import DPMotor, {
   screenOptions as DPMotorOptions,
-} from "../Screens/Dashboard/DPMotor";
+} from '../Screens/Dashboard/DPMotor';
 import HalfSangam, {
   screenOptions as HalfSangamOptions,
-} from "../Screens/Dashboard/HalfSangam";
+} from '../Screens/Dashboard/HalfSangam';
 import GroupJodi, {
   screenOptions as GroupJodiOptions,
-} from "../Screens/Dashboard/GroupJodi";
+} from '../Screens/Dashboard/GroupJodi';
 import RedBracket, {
   screenOptions as RedBracketOptions,
-} from "../Screens/Dashboard/RedBracket";
+} from '../Screens/Dashboard/RedBracket';
 import PanelGroup, {
   screenOptions as PanelGroupOptions,
-} from "../Screens/Dashboard/PanelGroup";
+} from '../Screens/Dashboard/PanelGroup';
 import FullSangam, {
   screenOptions as FullSangamOptions,
-} from "../Screens/Dashboard/FullSangam";
+} from '../Screens/Dashboard/FullSangam';
 import DigitBasedGame, {
   screenOptions as DigitBasedGameOptions,
-} from "../Screens/Dashboard/DigitBasedGame";
+} from '../Screens/Dashboard/DigitBasedGame';
 import ChoicePannaGame, {
   screenOptions as ChoicePannaGameOptions,
-} from "../Screens/Dashboard/ChoicePannaGame";
+} from '../Screens/Dashboard/ChoicePannaGame';
 import TwoDigitPanelGame, {
   screenOptions as TwoDigitPanelGameOptions,
-} from "../Screens/Dashboard/TwoDigitPanelGame";
+} from '../Screens/Dashboard/TwoDigitPanelGame';
 import SPDPTPGame, {
   screenOptions as SPDPTPGameOptions,
-} from "../Screens/Dashboard/SPDPTPGame";
+} from '../Screens/Dashboard/SPDPTPGame';
 import ProfileScreen, {
   screenOptions as ProfileOptions,
-} from "../Screens/Profile/Profile.js";
+} from '../Screens/Profile/Profile.js';
 import ProfileSettingScreen, {
   screenOptions as ProfileSettingOptions,
-} from "../Screens/Profile/ProfileSetting.js";
+} from '../Screens/Profile/ProfileSetting.js';
 import AccountStatement, {
   screenOptions as AccountStatementOptions,
-} from "../Screens/Profile/AccountStatement.js";
+} from '../Screens/Profile/AccountStatement.js';
 import HistoryScreen, {
   screenOptions as HistoryOptions,
-} from "../Screens/History/History.js";
+} from '../Screens/History/History.js';
 import BidHistoryScreen, {
   screenOptions as BidHistoryOptions,
-} from "../Screens/History/BidHistory.js";
+} from '../Screens/History/BidHistory.js';
 import BidAmountScreen, {
   screenOptions as BidAmountOptions,
-} from "../Screens/History/BidAmountScreen.js";
+} from '../Screens/History/BidAmountScreen.js';
 import TransactionHistory, {
   screenOptions as TransactionHistoryOptions,
-} from "../Screens/History/TransactionHistory.js";
+} from '../Screens/History/TransactionHistory.js';
 import DashboardScreen, {
   screenOptions as DashboardOptions,
-} from "../Screens/Dashboard/Dashboard.js";
+} from '../Screens/Dashboard/Dashboard.js';
 import ProfileDetailScreen, {
   screenOptions as ProfileDetailOptions,
-} from "../Screens/Profile/ProfileDetail.js";
+} from '../Screens/Profile/ProfileDetail.js';
 import StartSplashScreen, {
   screenOptions as StartSplashOptions,
-} from "../Screens/StartSplash/startSplash.js";
+} from '../Screens/StartSplash/startSplash.js';
 import SignupScreen, {
   screenOptions as SignupOptions,
-} from "../Screens/SignUp/signup.js";
-import Constants from "../Constants/constant";
-import constant from "../Constants/constant";
+} from '../Screens/SignUp/signup.js';
+import Constants from '../Constants/constant';
+import constant from '../Constants/constant';
 
 const defaultNavigationOption = {
   headerStyle: {
@@ -151,12 +154,12 @@ const defaultNavigationOption = {
   headerTitleStyle: {
     fontFamily: Constants.Fonts.FontFamily.semiBold,
     fontSize: Constants.Fonts.Size.headerTitle,
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
   headerBackTitleStyle: {
     fontFamily: Constants.Fonts.FontFamily.regular,
   },
-  headerTintColor: "white",
+  headerTintColor: 'white',
 };
 
 const authNavigatorStack = createStackNavigator();
@@ -165,8 +168,7 @@ const SignUpNavigatorStack = createStackNavigator();
 export const SignUpNavigator = () => {
   return (
     <SignUpNavigatorStack.Navigator
-      screenOptions={defaultNavigationOption}
-    ></SignUpNavigatorStack.Navigator>
+      screenOptions={defaultNavigationOption}></SignUpNavigatorStack.Navigator>
   );
 };
 
@@ -184,8 +186,7 @@ export const DashboardNavigator = (props) => {
         props.isLogin
           ? constant.Navigation.dashboard
           : constant.Navigation.startSplash
-      }
-    >
+      }>
       <StartSplashNavigatorStack.Screen
         name={constant.Navigation.startSplash}
         component={StartSplashScreen}
@@ -219,7 +220,7 @@ export const DashboardNavigator = (props) => {
       <DashboardNavigatorStack.Screen
         name={Constants.Navigation.dashboard}
         component={DashboardScreen}
-        options={{ headerShown: false }}
+        options={{headerShown: false}}
       />
       <DashboardNavigatorStack.Screen
         name={Constants.Navigation.AllGamesDashboard}
@@ -237,62 +238,62 @@ export const DashboardNavigator = (props) => {
         options={FigureGameOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"JodiGame"}
+        name={'JodiGame'}
         component={JodiGame}
         options={JodiGameOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"SinglePanna"}
+        name={'SinglePanna'}
         component={SinglePanna}
         options={SinglePannaOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"DoublePanna"}
+        name={'DoublePanna'}
         component={DoublePanna}
         options={DoublePannaOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"TriplePanna"}
+        name={'TriplePanna'}
         component={TriplePanna}
         options={TriplePannaOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"ChoicePana"}
+        name={'ChoicePana'}
         component={ChoicePanna}
         options={ChoicePannaOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"SPMotor"}
+        name={'SPMotor'}
         component={SPMotor}
         options={SPMotorOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"DPMotor"}
+        name={'DPMotor'}
         component={DPMotor}
         options={DPMotorOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"RedBracket"}
+        name={'RedBracket'}
         component={RedBracket}
         options={RedBracketOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"PanelGroup"}
+        name={'PanelGroup'}
         component={PanelGroup}
         options={PanelGroupOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"HalfSangam"}
+        name={'HalfSangam'}
         component={HalfSangam}
         options={HalfSangamOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"FullSangam"}
+        name={'FullSangam'}
         component={FullSangam}
         options={FullSangamOptions}
       />
       <DashboardNavigatorStack.Screen
-        name={"GroupJodi"}
+        name={'GroupJodi'}
         component={GroupJodi}
         options={GroupJodiOptions}
       />
@@ -379,6 +380,11 @@ export const DashboardNavigator = (props) => {
         options={AddFundsOptions}
       />
       <WalletNavigatorStack.Screen
+        name={'paymentmodal'}
+        component={PaymentModal}
+        options={PaymentModalOptions}
+      />
+      <WalletNavigatorStack.Screen
         name={Constants.Navigation.withdraw}
         component={WithdrawScreen}
         options={WithdrawOptions}
@@ -400,7 +406,7 @@ export const DashboardNavigator = (props) => {
         options={BidAmountOptions}
       />
       <HistoryNavigatorStack.Screen
-        name={"TransactionHistory"}
+        name={'TransactionHistory'}
         component={TransactionHistory}
         options={TransactionHistoryOptions}
       />

@@ -1,5 +1,5 @@
 apply plugin: "com.android.application"
-
+apply from: '../../node_modules/react-native-unimodules/gradle.groovy'
 import com.android.build.OutputFile
 
 /**
@@ -122,7 +122,10 @@ def enableHermes = project.ext.react.get("enableHermes", false);
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "2048M"
+    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -130,7 +133,7 @@ android {
 
     defaultConfig {
         applicationId "com.braingamepaymentrn"
-        minSdkVersion rootProject.ext.minSdkVersion
+        minSdkVersion 19
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
@@ -185,13 +188,15 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules
-
+    implementation "com.android.support:support-v4:27.+"
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
     implementation 'com.google.firebase:firebase-crashlytics'
+    addUnimodulesDependencies()
     implementation 'com.google.firebase:firebase-analytics'
     implementation "com.google.android.gms:play-services-base:15.0.0"
     implementation "com.google.firebase:firebase-core:15.0.2"
     implementation "com.google.firebase:firebase-messaging:15.0.2"
+    implementation project(':react-native-razorpay')
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
     implementation platform('com.google.firebase:firebase-bom:25.12.0')
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
