@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from 'react';
 import {
   View,
   Text,
@@ -7,23 +7,23 @@ import {
   ToastAndroid,
   ScrollView,
   Dimensions,
-} from "react-native";
-import { AntDesign } from "@expo/vector-icons";
-import { APIResource } from "../../APIManager";
-import constant from "../../Constants/constant";
-import TextField from "../../Components/UI/TextField";
-import CustomButton from "../../Components/UI/Button";
-import TopView from "./TopView";
-import { RecoveryScreensEnum } from "../../Constants/Enum";
-import LeftHeader from "./LeftHeader";
-import Loader from "../../Components/UI/Loader";
-import AsyncStorage from "@react-native-community/async-storage";
+} from 'react-native';
+import {AntDesign} from '@expo/vector-icons';
+import {APIResource} from '../../APIManager';
+import constant from '../../Constants/constant';
+import TextField from '../../Components/UI/TextField';
+import CustomButton from '../../Components/UI/Button';
+import TopView from './TopView';
+import {RecoveryScreensEnum} from '../../Constants/Enum';
+import LeftHeader from './LeftHeader';
+import Loader from '../../Components/UI/Loader';
+import AsyncStorage from '@react-native-community/async-storage';
 
 const LoginScreen = (props) => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [showLoader, setLoader] = useState(false);
-  const [fcmToken, setFcmToken] = useState("");
+  const [fcmToken, setFcmToken] = useState('');
   const navigateToRecoveryScreenHandler = (id) => {
     props.navigation.navigate(constant.Navigation.recoverCredentials, {
       prodId: id,
@@ -35,19 +35,19 @@ const LoginScreen = (props) => {
   }, []);
   getUsername = async () => {
     try {
-      AsyncStorage.getItem("isLogin").then((res) => {
-        if (res == "true") {
-          AsyncStorage.getItem("username").then((res) => {
+      AsyncStorage.getItem('isLogin').then((res) => {
+        if (res == 'true') {
+          AsyncStorage.getItem('username').then((res) => {
             console.log(res);
             setUsername(res);
-            AsyncStorage.getItem("fcmToken").then((fcmToken) => {
+            AsyncStorage.getItem('fcmToken').then((fcmToken) => {
               setFcmToken(fcmToken);
             });
           });
         } else {
-          AsyncStorage.getItem("fcmToken").then((fcmToken) => {
+          AsyncStorage.getItem('fcmToken').then((fcmToken) => {
             setFcmToken(fcmToken);
-            console.log("hey");
+            console.log('hey');
           });
         }
       });
@@ -56,33 +56,12 @@ const LoginScreen = (props) => {
     }
   };
   const submitBtnHandler = (id) => {
-    let error = "";
+    let error = '';
     switch (id) {
       case 0:
         setLoader(true);
-        //props.navigation.push(constant.Navigation.dashboard);
-        if (username && password) {
-          APIResource.loginUser(username, password, fcmToken).then((res) => {
-            setLoader(false);
-            if (res.status === "success") {
-              console.log("hey" + res);
-              AsyncStorage.setItem("isLogin", "true");
-              AsyncStorage.setItem("username", username);
-              AsyncStorage.setItem("device_token", res.token);
-              props.navigation.push(constant.Navigation.dashboard);
-            } else {
-              ToastAndroid.show(res.message, 5);
-            }
-          });
-        } else {
-          if (username == "") {
-            error = constant.Strings.validation.emptyEmail;
-          } else if (password == "") {
-            error = constant.Strings.validation.emptyPassword;
-          }
-          ToastAndroid.show(error, 5);
-          setLoader(false);
-        }
+        props.navigation.push(constant.Navigation.dashboard);
+
         break;
       case 1:
         props.navigation.push(constant.Navigation.loginWithMPIN);
@@ -97,9 +76,8 @@ const LoginScreen = (props) => {
           style={styles.bottomButton}
           onPress={navigateToRecoveryScreenHandler.bind(
             this,
-            RecoveryScreensEnum.forgotPassword.id
-          )}
-        >
+            RecoveryScreensEnum.forgotPassword.id,
+          )}>
           <Text style={styles.btmButtonText}>
             {constant.Strings.forgotPassword}?
           </Text>
@@ -109,9 +87,8 @@ const LoginScreen = (props) => {
           style={styles.bottomButton}
           onPress={navigateToRecoveryScreenHandler.bind(
             this,
-            RecoveryScreensEnum.forgotUsername.id
-          )}
-        >
+            RecoveryScreensEnum.forgotUsername.id,
+          )}>
           <Text style={styles.btmButtonText}>
             {constant.Strings.forgotUsername}?
           </Text>
@@ -121,9 +98,9 @@ const LoginScreen = (props) => {
   };
   return (
     <View style={styles.container}>
-      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
+      <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
         {<TopView />}
-        <View style={{ ...styles.TextView, marginTop: 10 }}>
+        <View style={{...styles.TextView, marginTop: 10}}>
           <TextField
             id="username"
             placeholder={constant.Strings.userNamePlaceholder}
@@ -173,7 +150,7 @@ const LoginScreen = (props) => {
             onPress={() => submitBtnHandler(1)}
           />
         </View>
-        <View style={{ alignItems: "center" }}>{BottomButtons()}</View>
+        <View style={{alignItems: 'center'}}>{BottomButtons()}</View>
       </ScrollView>
       {showLoader && <Loader />}
     </View>
@@ -182,8 +159,8 @@ const LoginScreen = (props) => {
 
 export const screenOptions = (navData) => {
   return {
-    headerTitle: null,
-    headerRight: () => <LeftHeader />,
+    headerTitle: 'LOGIN',
+
     headerBackTitleVisible: false,
     headerLeft: null,
   };
@@ -192,44 +169,44 @@ export const screenOptions = (navData) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    height: Dimensions.get("window").height,
-    backgroundColor: "black",
+    height: Dimensions.get('window').height,
+    backgroundColor: 'white',
   },
   leftHeaderView: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
     marginHorizontal: 15,
   },
   btmButtonText: {
-    textAlign: "center",
+    textAlign: 'center',
     fontFamily: constant.Fonts.FontFamily.regular,
     fontSize: constant.Fonts.Size.Title,
     color: constant.Colors.primary,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   TextView: {
-    alignItems: "center",
-    justifyContent: "center",
+    alignItems: 'center',
+    justifyContent: 'center',
     marginVertical: 0,
   },
   bottomButtonsContainer: {
-    flexDirection: "row",
-    width: "85%",
+    flexDirection: 'row',
+    width: '85%',
     marginTop: 5,
   },
   bottomButton: {
     flex: 1,
     borderWidth: 1,
     borderColor: constant.Colors.grey,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 5,
     marginHorizontal: 3,
     height: 45,
   },
   contact: {
-    color: "white",
+    color: 'white',
     fontFamily: constant.Fonts.FontFamily.bold,
     fontSize: constant.Fonts.Size.Title,
     marginLeft: 5,

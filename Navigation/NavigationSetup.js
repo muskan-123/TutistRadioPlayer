@@ -101,9 +101,9 @@ import TwoDigitPanelGame, {
 import SPDPTPGame, {
   screenOptions as SPDPTPGameOptions,
 } from '../Screens/Dashboard/SPDPTPGame';
-import ProfileScreen, {
+import Channels, {
   screenOptions as ProfileOptions,
-} from '../Screens/Profile/Profile.js';
+} from '../Screens/Profile/Channels.js';
 import ProfileSettingScreen, {
   screenOptions as ProfileSettingOptions,
 } from '../Screens/Profile/ProfileSetting.js';
@@ -139,7 +139,7 @@ import constant from '../Constants/constant';
 
 const defaultNavigationOption = {
   headerStyle: {
-    backgroundColor: Constants.Colors.primary,
+    backgroundColor: 'white',
   },
   headerLeftContainerStyle: {
     marginLeft: 10,
@@ -148,13 +148,12 @@ const defaultNavigationOption = {
     marginRight: 10,
   },
   headerBackTitleVisible: false,
-  headerStyle: {
-    backgroundColor: Constants.Colors.primary,
-  },
+
   headerTitleStyle: {
     fontFamily: Constants.Fonts.FontFamily.semiBold,
     fontSize: Constants.Fonts.Size.headerTitle,
     textTransform: 'uppercase',
+    color: 'black',
   },
   headerBackTitleStyle: {
     fontFamily: Constants.Fonts.FontFamily.regular,
@@ -183,44 +182,20 @@ export const DashboardNavigator = (props) => {
     <DashboardNavigatorStack.Navigator
       screenOptions={defaultNavigationOption}
       initialRouteName={
-        props.isLogin
-          ? constant.Navigation.dashboard
-          : constant.Navigation.startSplash
+        // props.isLogin
+        //   ? constant.Navigation.dashboard
+        constant.Navigation.dashboard
       }>
-      <StartSplashNavigatorStack.Screen
-        name={constant.Navigation.startSplash}
-        component={StartSplashScreen}
-        options={StartSplashOptions}
-      />
-      <StartSplashNavigatorStack.Screen
+      {/* <StartSplashNavigatorStack.Screen
         name={constant.Navigation.login}
         component={LoginScreen}
         options={LoginScreenOptions}
-      />
-      <StartSplashNavigatorStack.Screen
-        name={constant.Navigation.verifyOtp}
-        component={VerifyOtp}
-        options={VerifyOtpOptions}
-      />
-      <StartSplashNavigatorStack.Screen
-        name={Constants.Navigation.loginWithMPIN}
-        component={LoginWithMPIN}
-        options={LoginWithMPINOptions}
-      />
-      <authNavigatorStack.Screen
-        name={Constants.Navigation.recoverCredentials}
-        component={RecoverCredentials}
-        options={RecoverCredentialsOptions}
-      />
-      <SignUpNavigatorStack.Screen
-        name={Constants.Navigation.signUp}
-        component={SignupScreen}
-        options={SignupOptions}
-      />
+      /> */}
+
       <DashboardNavigatorStack.Screen
         name={Constants.Navigation.dashboard}
         component={DashboardScreen}
-        options={{headerShown: false}}
+        options={LoginScreenOptions}
       />
       <DashboardNavigatorStack.Screen
         name={Constants.Navigation.AllGamesDashboard}
@@ -232,132 +207,14 @@ export const DashboardNavigator = (props) => {
         component={GameDashboard}
         options={GameDashboardOptions}
       />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.figureGame}
-        component={FigureGame}
-        options={FigureGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'JodiGame'}
-        component={JodiGame}
-        options={JodiGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'SinglePanna'}
-        component={SinglePanna}
-        options={SinglePannaOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'DoublePanna'}
-        component={DoublePanna}
-        options={DoublePannaOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'TriplePanna'}
-        component={TriplePanna}
-        options={TriplePannaOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'ChoicePana'}
-        component={ChoicePanna}
-        options={ChoicePannaOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'SPMotor'}
-        component={SPMotor}
-        options={SPMotorOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'DPMotor'}
-        component={DPMotor}
-        options={DPMotorOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'RedBracket'}
-        component={RedBracket}
-        options={RedBracketOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'PanelGroup'}
-        component={PanelGroup}
-        options={PanelGroupOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'HalfSangam'}
-        component={HalfSangam}
-        options={HalfSangamOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'FullSangam'}
-        component={FullSangam}
-        options={FullSangamOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={'GroupJodi'}
-        component={GroupJodi}
-        options={GroupJodiOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.evenoddgame}
-        component={EvenOddGame}
-        options={EvenOddGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.digitBasedGame}
-        component={DigitBasedGame}
-        options={DigitBasedGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.choicePannaGame}
-        component={ChoicePannaGame}
-        options={ChoicePannaGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.twoDigitPanelGameOptions}
-        component={TwoDigitPanelGame}
-        options={TwoDigitPanelGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.SPDPTPGame}
-        component={SPDPTPGame}
-        options={SPDPTPGameOptions}
-      />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.notification}
-        component={NotificationScreen}
-        options={NotificationScreenOptions}
-      />
+
       {/* Profile Flow Screens*/}
       <ProfileNavigatorStack.Screen
         name={Constants.Navigation.profile}
-        component={ProfileScreen}
+        component={Channels}
         options={ProfileOptions}
       />
-      <ProfileNavigatorStack.Screen
-        name={Constants.Navigation.profileDetail}
-        component={ProfileDetailScreen}
-        options={ProfileDetailOptions}
-      />
-      <ProfileNavigatorStack.Screen
-        name={Constants.Navigation.profileSetting}
-        component={ProfileSettingScreen}
-        options={ProfileSettingOptions}
-      />
-      <ProfileNavigatorStack.Screen
-        name={Constants.Navigation.generatempin}
-        component={GenerateMpin}
-        options={GenerateMpinOptions}
-      />
-      <ProfileNavigatorStack.Screen
-        name={Constants.Navigation.howtoplay}
-        component={playScreen}
-        options={UpdateMpinOptions}
-      />
-      <ProfileNavigatorStack.Screen
-        name={Constants.Navigation.accountStatement}
-        component={AccountStatement}
-        options={AccountStatementOptions}
-      />
+
       {/* Wallet Flow Screens*/}
       <WalletNavigatorStack.Screen
         name={Constants.Navigation.wallet}
