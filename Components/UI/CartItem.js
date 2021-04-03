@@ -18,13 +18,7 @@ const CartItem = (props) => {
     <Cart style={styles.style}>
       <TouchableWithoutFeedback onPress={selectHandler}>
         <View style={styles.container}>
-          {/* <View style={[styles.imageContainer, imageStyle]}> */}
-          {/* <MaterialCommunityIcons
-              name="chevron-right"
-              size={30}
-              color="#e05a00"
-            /> */}
-          {/* <Image style={styles.icon} source={icon} resizeMode="contain" /> */}
+          <Image style={styles.icon} source={icon} resizeMode="contain" />
           {/* </View> */}
           <View style={{justifyContent: 'flex-start'}}>
             <Text style={styles.text}>{title}</Text>
@@ -37,8 +31,9 @@ const CartItem = (props) => {
 
 const styles = StyleSheet.create({
   icon: {
-    height: '100%',
-    width: '100%',
+    height: 25,
+    width: 25,
+    marginRight: 10,
   },
   imageContainer: {
     height: 43,

@@ -1,11 +1,19 @@
 import {WalletData, RequestFund} from './modelClass';
 
 export const walletArray = [
-  new WalletData(require('../assets/wallet.png'), 'Change Language', 0),
-  new WalletData(require('../assets/wallet.png'), 'Create your channel', 1),
-  new WalletData(require('../assets/wallet.png'), 'FAQs', 2),
-  new WalletData(require('../assets/wallet.png'), 'About Us', 3),
-  new WalletData(require('../assets/wallet.png'), 'Contact Us', 3),
+  new WalletData(
+    require('../Screens/assets/language.png'),
+    'Change Language',
+    0,
+  ),
+  new WalletData(
+    require('../Screens/assets/createchannel.png'),
+    'Create your channel',
+    1,
+  ),
+  new WalletData(require('../Screens/assets/faq.png'), 'FAQs', 2),
+  new WalletData(require('../Screens/assets/about.png'), 'About Us', 3),
+  new WalletData(require('../Screens/assets/contactus.png'), 'Contact Us', 3),
 ];
 
 export const HistoryArray = [
@@ -15,14 +23,24 @@ export const HistoryArray = [
 ];
 
 export const ProfileArray = [
-  new WalletData(require('../assets/user.png'), 'My Profile', 0),
-  new WalletData(require('../assets/user.png'), 'Generate MPIN', 1),
-  // new WalletData(require("../assets/user.png"), "Settings", 2),
-  new WalletData(require('../assets/user.png'), 'How To Play', 3),
-  new WalletData(require('../assets/user.png'), 'Game Rates', 4),
-  new WalletData(require('../assets/user.png'), 'Notice Board / Rules', 5),
-  new WalletData(require('../assets/user.png'), 'Account Statement', 6),
-  new WalletData(require('../assets/user.png'), 'Logout', 7),
+  {
+    id: 1,
+    name: 'Jain Bhajan',
+    image: 'http://35.154.213.13:9191/navkar_mantra.jpg',
+    url: 'http://35.154.213.13:8000/jain-bhajan',
+  },
+  {
+    id: 2,
+    name: 'Jain Bhajan',
+    image: 'http://35.154.213.13:9191/navkar_mantra.jpg',
+    url: 'http://35.154.213.13:8000/jain-bhajan',
+  },
+  {
+    id: 3,
+    name: 'Jain Bhajan',
+    image: 'http://35.154.213.13:9191/navkar_mantra.jpg',
+    url: 'http://35.154.213.13:8000/jain-bhajan',
+  },
 ];
 export const generateMpin = [
   new WalletData(require('../assets/user.png'), 'Change Mpin', 0),
