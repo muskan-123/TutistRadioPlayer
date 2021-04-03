@@ -13,26 +13,8 @@ import constant from '../../Constants/constant';
 import Cart from '../../Components/UI/CartItem';
 import CartList from '../../Components/UI/Cart';
 import {ProfileArray} from '../../Model/ModelData';
-import {Ionicons, AntDesign} from '@expo/vector-icons';
-import {APIResource} from '../../APIManager';
-import Loader from '../../Components/UI/Loader';
 
 const Channels = (props) => {
-  const [fcmToken, setFcmToken] = useState('');
-  const [APIToken, setAPIToken] = useState('');
-  const [showLoader, setLoader] = useState(false);
-  function getUsername() {
-    AsyncStorage.getItem('fcmToken').then((fcmToken) => {
-      setFcmToken(fcmToken);
-    });
-    AsyncStorage.getItem('device_token').then((APIToken) => {
-      if (APIToken) setAPIToken(APIToken);
-      else setMobile('');
-    });
-  }
-  useEffect(() => {
-    getUsername();
-  }, []);
   // const cartSelectionHandler = (id) => {
   //   var navigationScreen;
   //   var params;
@@ -93,50 +75,47 @@ const Channels = (props) => {
   //   }
   // };
 
-  const renderList = (Item) => {
-    return (
-      <View
-        style={{
-          height: 250,
-          backgroundColor: 'white',
-          marginVertical: 20,
-          elevation: 5,
-          borderRadius: 5,
-          marginHorizontal: 10,
-        }}>
-        <View style={{height: '80%', borderRadius: 5}}>
-          <Image
-            source={require('../../assets/whatsapp.png')}
-            style={{width: '100%', height: '100%'}}
-            resizeMode="contain"
-          />
-        </View>
+  // const renderList = (Item) => {
+  //   return (
 
-        <View
-          style={{
-            height: '20%',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text style={{color: ''}}>CHANNEL 1</Text>
-        </View>
-      </View>
-    );
-  };
+  //   );
+  // };
 
   return (
     <View style={styles.container}>
-      <SafeAreaView style={styles.container} forceInset={{bottom: 'always'}}>
-        <FlatList
-          bounces={false}
-          style={styles.flatlist}
-          data={ProfileArray}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={renderList}
-          contentContainerStyle={{overflow: 'visible'}}
-        />
-        {showLoader && <Loader />}
-      </SafeAreaView>
+      <FlatList
+        style={styles.flatlist}
+        data={ProfileArray}
+        keyExtractor={(item, index) => index}
+        renderItem={({item}) => (
+          <View
+            style={{
+              height: 250,
+              backgroundColor: 'white',
+              marginVertical: 20,
+              elevation: 5,
+              borderRadius: 5,
+              marginHorizontal: 10,
+            }}>
+            <View style={{height: '80%', borderRadius: 5}}>
+              <Image
+                source={{uri: item.image}}
+                style={{width: '100%', height: '100%'}}
+                resizeMode="cover"
+              />
+            </View>
+
+            <View
+              style={{
+                height: '20%',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+              <Text style={{color: 'black'}}>{item.name}</Text>
+            </View>
+          </View>
+        )}
+      />
     </View>
   );
 };
@@ -151,12 +130,12 @@ export const screenOptions = (navData) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
   },
   flatlist: {
     flex: 1,
     paddingHorizontal: 20,
     marginTop: 10,
+    paddingBottom: 100,
   },
   leftHeaderView: {
     flexDirection: 'row',

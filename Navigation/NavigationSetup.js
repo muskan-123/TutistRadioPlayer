@@ -8,27 +8,11 @@ import LoginScreen, {
 import VerifyOtp, {
   screenOptions as VerifyOtpOptions,
 } from '../Screens/Auth/VerifyOtp.js';
-import NotificationScreen, {
-  screenOptions as NotificationScreenOptions,
-} from '../Screens/Dashboard/NotificationScreen';
-import RecoverCredentials, {
-  screenOptions as RecoverCredentialsOptions,
-} from '../Screens/Auth/RecoverCredenttials.js';
+
 import GameDashboard, {
   screenOptions as GameDashboardOptions,
 } from '../Screens/Dashboard/GameDashboard';
-import AllGamesDashboard, {
-  screenOptions as AllGamesDashboardOptions,
-} from '../Screens/Dashboard/AllGamesDashboard';
-import LoginWithMPIN, {
-  screenOptions as LoginWithMPINOptions,
-} from '../Screens/Auth/LoginWithMPIN.js';
-import GenerateMpin, {
-  screenOptions as GenerateMpinOptions,
-} from '../Screens/Profile/GenerateMpin';
-import playScreen, {
-  screenOptions as UpdateMpinOptions,
-} from '../Screens/Profile/playScreen';
+
 import WalletScreen, {
   screenOptions as WalletOptions,
 } from '../Screens/Wallet/Wallet.js';
@@ -47,69 +31,11 @@ import PaymentModal, {
 import WithdrawScreen, {
   screenOptions as WithdrawOptions,
 } from '../Screens/Wallet/Withdraw.js';
-import EvenOddGame, {
-  screenOptions as EvenOddGameOptions,
-} from '../Screens/Dashboard/EvenOddGame';
-import FigureGame, {
-  screenOptions as FigureGameOptions,
-} from '../Screens/Dashboard/FigureGame';
-import JodiGame, {
-  screenOptions as JodiGameOptions,
-} from '../Screens/Dashboard/JodiGame';
-import DoublePanna, {
-  screenOptions as DoublePannaOptions,
-} from '../Screens/Dashboard/DoublePanna';
-import TriplePanna, {
-  screenOptions as TriplePannaOptions,
-} from '../Screens/Dashboard/TriplePanna';
-import ChoicePanna, {
-  screenOptions as ChoicePannaOptions,
-} from '../Screens/Dashboard/ChoicePanna';
-import SinglePanna, {
-  screenOptions as SinglePannaOptions,
-} from '../Screens/Dashboard/SinglePanna';
-import SPMotor, {
-  screenOptions as SPMotorOptions,
-} from '../Screens/Dashboard/SPMotor';
-import DPMotor, {
-  screenOptions as DPMotorOptions,
-} from '../Screens/Dashboard/DPMotor';
-import HalfSangam, {
-  screenOptions as HalfSangamOptions,
-} from '../Screens/Dashboard/HalfSangam';
-import GroupJodi, {
-  screenOptions as GroupJodiOptions,
-} from '../Screens/Dashboard/GroupJodi';
-import RedBracket, {
-  screenOptions as RedBracketOptions,
-} from '../Screens/Dashboard/RedBracket';
-import PanelGroup, {
-  screenOptions as PanelGroupOptions,
-} from '../Screens/Dashboard/PanelGroup';
-import FullSangam, {
-  screenOptions as FullSangamOptions,
-} from '../Screens/Dashboard/FullSangam';
-import DigitBasedGame, {
-  screenOptions as DigitBasedGameOptions,
-} from '../Screens/Dashboard/DigitBasedGame';
-import ChoicePannaGame, {
-  screenOptions as ChoicePannaGameOptions,
-} from '../Screens/Dashboard/ChoicePannaGame';
-import TwoDigitPanelGame, {
-  screenOptions as TwoDigitPanelGameOptions,
-} from '../Screens/Dashboard/TwoDigitPanelGame';
-import SPDPTPGame, {
-  screenOptions as SPDPTPGameOptions,
-} from '../Screens/Dashboard/SPDPTPGame';
+
 import Channels, {
   screenOptions as ProfileOptions,
 } from '../Screens/Profile/Channels.js';
-import ProfileSettingScreen, {
-  screenOptions as ProfileSettingOptions,
-} from '../Screens/Profile/ProfileSetting.js';
-import AccountStatement, {
-  screenOptions as AccountStatementOptions,
-} from '../Screens/Profile/AccountStatement.js';
+
 import HistoryScreen, {
   screenOptions as HistoryOptions,
 } from '../Screens/History/History.js';
@@ -125,15 +51,7 @@ import TransactionHistory, {
 import DashboardScreen, {
   screenOptions as DashboardOptions,
 } from '../Screens/Dashboard/Dashboard.js';
-import ProfileDetailScreen, {
-  screenOptions as ProfileDetailOptions,
-} from '../Screens/Profile/ProfileDetail.js';
-import StartSplashScreen, {
-  screenOptions as StartSplashOptions,
-} from '../Screens/StartSplash/startSplash.js';
-import SignupScreen, {
-  screenOptions as SignupOptions,
-} from '../Screens/SignUp/signup.js';
+
 import Constants from '../Constants/constant';
 import constant from '../Constants/constant';
 
@@ -195,13 +113,9 @@ export const DashboardNavigator = (props) => {
       <DashboardNavigatorStack.Screen
         name={Constants.Navigation.dashboard}
         component={DashboardScreen}
-        options={LoginScreenOptions}
+        options={{headerShown: false}}
       />
-      <DashboardNavigatorStack.Screen
-        name={Constants.Navigation.AllGamesDashboard}
-        component={AllGamesDashboard}
-        options={AllGamesDashboardOptions}
-      />
+
       <DashboardNavigatorStack.Screen
         name={Constants.Navigation.GameDashboard}
         component={GameDashboard}
