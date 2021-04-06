@@ -5,8 +5,12 @@ import Slider from '@react-native-community/slider';
 import TrackPlayer, {useProgress} from 'react-native-track-player';
 
 export default function SliderComp() {
-  const {position, duration} = useProgress();
-  console.log(duration);
+  let position = 0;
+  let duration = 0;
+  useEffect(() => {
+    //    position = await TrackPlayer.getPosition();
+    //  duration = await TrackPlayer.getDuration();
+  }, []);
   const formatTime = (secs) => {
     let minutes = Math.floor(secs / 60);
     let seconds = Math.ceil(secs - minutes * 60);
