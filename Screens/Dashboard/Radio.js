@@ -30,7 +30,7 @@ const {width, height} = Dimensions.get('window');
 // ];
 
 export default function PlayerScreen() {
-  const [play, setPlay] = useState('true');
+  const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     // position.addListener(({ value }) => {
     //   console.log(value);
@@ -38,14 +38,27 @@ export default function PlayerScreen() {
 
     TrackPlayer.setupPlayer().then(async () => {
       // The player is ready to be used
-      console.log('Player ready');
+      console.log(currentIndex);
       // add the array of songs in the playlist
       await TrackPlayer.reset();
-      await TrackPlayer.add(songs);
-      TrackPlayer.play();
+      const position = await TrackPlayer.getPosition();
+      const duration = await TrackPlayer.getDuration();
 
+      console.log('hey', duration, position);
+      TrackPlayer.play();
+      console.log(songs[currentIndex].name);
+
+      await TrackPlayer.add({
+        id: songs[currentIndex].id,
+        url: songs[currentIndex].url,
+        type: 'default',
+        title: songs[currentIndex].name,
+        album: songs[currentIndex].name,
+        artist: 'Track Artist',
+        artwork: songs[currentIndex].image,
+      });
       await TrackPlayer.updateOptions({
-        stopWithApp: false,
+        stopWithApp: true,
         alwaysPauseOnInterruption: true,
         capabilities: [
           Capability.Play,
@@ -81,14 +94,23 @@ export default function PlayerScreen() {
             width: width,
           }}>
           <Image
-            source={{uri: songs[0].image}}
+            source={{uri: songs[currentIndex].image}}
             style={{width: 320, height: 320, borderRadius: 5}}
           />
         </Animated.View>
-        <Text style={styles.title}>{songs[0].name}</Text>
-        <Text style={styles.artist}>{songs[0].artist}</Text>
-        <SliderComp />
-        <Controller />
+        <Text style={styles.title}>{songs[currentIndex].name}</Text>
+        <Text style={styles.artist}>{songs[currentIndex].name}</Text>
+        {/* <SliderComp /> */}
+        <Controller
+          onPrv={() => {
+            setCurrentIndex(currentIndex - 1);
+          }}
+          isPrv={currentIndex != 0}
+          isNext={currentIndex != songs.length - 1}
+          onNext={() => {
+            setCurrentIndex(currentIndex + 1);
+          }}
+        />
       </View>
     </SafeAreaView>
   );
