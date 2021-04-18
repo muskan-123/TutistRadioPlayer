@@ -7,6 +7,7 @@ import {
   BackHandler,
   Dimensions,
   Image,
+  SafeAreaView,
 } from 'react-native';
 import Channels from '../Profile/Channels';
 import Wallet from '../Wallet/Wallet';
@@ -17,18 +18,39 @@ import {Header} from 'react-native/Libraries/NewAppScreen';
 
 const DashboardScreen = (props) => {
   const [selectedTab, setSelectedTab] = useState('Radio');
+  const [currentChannel, setCurrentChannel] = useState(0);
+  const [channelList, setChannelList] = useState([]);
+  const [bannerList, setBannerList] = useState([]);
+
+  async function getData() {
+    let data = await fetch('http://3.7.53.241:8080/');
+    let dataJson = await data.json();
+    // console.log(dataJson);
+    setChannelList(dataJson.channel_list);
+    setBannerList(dataJson.banner_list);
+    console.log(channelList);
+    console.log(bannerList);
+  }
+
+
+
   const flatlistView = (props) => {
-    return (
-      <View style={styles.flatlistContainer}>
-        {selectedTab == 'Radio' ? (
-          <Radio />
-        ) : selectedTab == 'Channels' ? (
-          <Channels />
-        ) : (
-          <Wallet />
-        )}
-      </View>
-    );
+    if (channelList.length > 0 && bannerList.length > 0) {
+      return (
+        <View style={styles.flatlistContainer}>
+          {selectedTab == 'Radio' ? (
+            <Radio currentChannel = {currentChannel} channelList = {channelList} bannerList = {bannerList} />
+          ) : selectedTab == 'Channels' ? (
+            <Channels setChannel = {setCurrentChannel} setTab = {setSelectedTab} channelList = {channelList} />
+          ) : (
+            <Wallet navigation = {props.navigation} />
+          )}
+        </View>
+      );
+    }
+    else {
+      return <></>
+    }
   };
   const Header = () => {
     return (
@@ -38,11 +60,12 @@ const DashboardScreen = (props) => {
           height: 55,
           justifyContent: 'center',
           alignItems: 'center',
-
-          shadowColor: 'grey',
-          shadowOpacity: 2,
-          shadowOpacity: 0.7,
-          elevation: 4,
+          borderBottomWidth: 1,
+          borderBottomColor: '#ddd'
+          // shadowColor: 'grey',
+          // shadowOpacity: 2,
+          // shadowOpacity: 0.7,
+          // elevation: 4,
         }}>
         <Text style={{fontSize: 20, color: constant.Colors.primary}}>
           {selectedTab == 'Radio'
@@ -108,16 +131,17 @@ const DashboardScreen = (props) => {
     );
   };
   useEffect(() => {
+    getData();
     BackHandler.addEventListener('hardwareBackPress', () => true);
     return () =>
       BackHandler.removeEventListener('hardwareBackPress', () => true);
   }, []);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       {Header(props)}
       {flatlistView(props)}
       {bottomView(props)}
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -54,6 +54,8 @@ import DashboardScreen, {
 
 import Constants from '../Constants/constant';
 import constant from '../Constants/constant';
+import WebScreen from '../Screens/Dashboard/WebScreen.js';
+import SplashScreen from '../Screens/Dashboard/SplashScreen.js';
 
 const defaultNavigationOption = {
   headerStyle: {
@@ -102,7 +104,7 @@ export const DashboardNavigator = (props) => {
       initialRouteName={
         // props.isLogin
         //   ? constant.Navigation.dashboard
-        constant.Navigation.dashboard
+        constant.Navigation.splash
       }>
       {/* <StartSplashNavigatorStack.Screen
         name={constant.Navigation.login}
@@ -111,8 +113,20 @@ export const DashboardNavigator = (props) => {
       /> */}
 
       <DashboardNavigatorStack.Screen
+        name={Constants.Navigation.splash}
+        component={SplashScreen}
+        options={{headerShown: false}}
+      />
+
+      <DashboardNavigatorStack.Screen
         name={Constants.Navigation.dashboard}
         component={DashboardScreen}
+        options={{headerShown: false}}
+      />
+
+      <DashboardNavigatorStack.Screen
+        name={Constants.Navigation.webScreen}
+        component={WebScreen}
         options={{headerShown: false}}
       />
 

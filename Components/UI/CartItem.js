@@ -16,7 +16,7 @@ const CartItem = (props) => {
 
   return (
     <Cart style={styles.style}>
-      <TouchableWithoutFeedback onPress={selectHandler}>
+      {/* <TouchableWithoutFeedback onPress={selectHandler}> */}
         <View style={styles.container}>
           <Image style={styles.icon} source={icon} resizeMode="contain" />
           {/* </View> */}
@@ -24,7 +24,7 @@ const CartItem = (props) => {
             <Text style={styles.text}>{title}</Text>
           </View>
         </View>
-      </TouchableWithoutFeedback>
+      {/* </TouchableWithoutFeedback> */}
     </Cart>
   );
 };
@@ -56,12 +56,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   style: {
-    marginVertical: 10,
+    // marginVertical: 10,
     width: '100%',
     height: 70,
     borderRadius: 12,
     backgroundColor: constant.Colors.primary,
     paddingHorizontal: 30,
+    elevation: 0
   },
 });
 

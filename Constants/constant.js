@@ -125,6 +125,8 @@ export default {
     bidHistory: 'BidHistory',
     AllGamesDashboard: 'All Games',
     dashboard: 'dashboard',
+    webScreen: 'webScreen',
+    splash: 'splash',
     signUp: 'signUp',
     fundRequest: 'FundRequest',
     winningHistory: 'WinningHistory',

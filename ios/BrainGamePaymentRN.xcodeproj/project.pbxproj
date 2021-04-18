@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BrainGamePaymentRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BrainGamePaymentRNTests.m */; };
 		02008DFD8B3580F2D3C4511A /* libPods-BrainGamePaymentRN-BrainGamePaymentRNTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9394CA7F9E5A83DCB19C4C7 /* libPods-BrainGamePaymentRN-BrainGamePaymentRNTests.a */; };
-		0797CC41419E4C64AFE0D088 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 415E32AF2D2D465684DB6BA8 /* Fontisto.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -18,24 +17,9 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* BrainGamePaymentRNTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BrainGamePaymentRNTests.m */; };
-		460DCD2D0659416EA4A937B5 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1FCC738699CC43278BB5A3FE /* FontAwesome5_Solid.ttf */; };
-		490D61EBB7A14DAAA0FAD18E /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25B2A83780C14729A7508BA2 /* Foundation.ttf */; };
-		50B46AFC8CD144D0919FDACC /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6D93D49984F45CE9CCF636A /* AntDesign.ttf */; };
-		5F1FD693517E4C9DA38CE4B0 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 65E66B39C20441DDB2681DCA /* Zocial.ttf */; };
-		638EF51BFDFD459988AB1E24 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B91BF47BEB6456A922DAD72 /* Ionicons.ttf */; };
-		6D2E91B89C6B4F409428E0D5 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05D01649C5074A41A7104C3B /* FontAwesome5_Regular.ttf */; };
 		7B9E7AAC8C322C90F79CAB4E /* libPods-BrainGamePaymentRN-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD7BC2F7DCFA059918BB8DC /* libPods-BrainGamePaymentRN-tvOS.a */; };
-		8080CAD0170B46099C14BB37 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B678ADAABC504A76A51C6B88 /* Feather.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8D94E0216F3F49AEA1AB36D6 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9BD13FAB296F4A9686B1F4E7 /* SimpleLineIcons.ttf */; };
-		9CDD9260220D4BB8A35622B5 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 999A6C8BA93947AFA8A98CE8 /* MaterialIcons.ttf */; };
-		BC2AAAC9B7AE4ADBAFB56180 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9142021C8BB4154B7065688 /* FontAwesome.ttf */; };
-		CF2A1C563C424D1D981579DC /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAA66065C2624B8F8A51F273 /* EvilIcons.ttf */; };
-		D194DEFF13E7450AB3A14210 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A132F80B7F1145CFB38CDDD9 /* Entypo.ttf */; };
 		D81BFFF6C619EDBC8E71E039 /* libPods-BrainGamePaymentRN-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C988C28ADEE1BFBC75692FCE /* libPods-BrainGamePaymentRN-tvOSTests.a */; };
-		E92E1DF57389492C847DEF53 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30C0FB0C7E8B4C0889000EC9 /* FontAwesome5_Brands.ttf */; };
-		EE2AE874A7D44630A95F6A4A /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBA73D35D72A4DBD883E1646 /* Octicons.ttf */; };
-		FC6FB6F54C2840DC972A052F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EFF3CA3FA914AC5B5AF644D /* MaterialCommunityIcons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,44 +45,28 @@
 		00E356EE1AD99517003FC87E /* BrainGamePaymentRNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrainGamePaymentRNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BrainGamePaymentRNTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrainGamePaymentRNTests.m; sourceTree = "<group>"; };
-		05D01649C5074A41A7104C3B /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		07284A59FF7FD5817B42F8FD /* Pods-BrainGamePaymentRN-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN-tvOSTests/Pods-BrainGamePaymentRN-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		0EFF3CA3FA914AC5B5AF644D /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* BrainGamePaymentRN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainGamePaymentRN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* Prabhavana.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prabhavana.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BrainGamePaymentRN/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BrainGamePaymentRN/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BrainGamePaymentRN/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BrainGamePaymentRN/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BrainGamePaymentRN/main.m; sourceTree = "<group>"; };
-		1FCC738699CC43278BB5A3FE /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
-		25B2A83780C14729A7508BA2 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* BrainGamePaymentRN-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BrainGamePaymentRN-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* BrainGamePaymentRN-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BrainGamePaymentRN-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		30C0FB0C7E8B4C0889000EC9 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		3B91BF47BEB6456A922DAD72 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		415E32AF2D2D465684DB6BA8 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		452DBD49983D530522F44F39 /* Pods-BrainGamePaymentRN-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN-tvOSTests/Pods-BrainGamePaymentRN-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E3BAAA68D0D4391A5B513ED /* Pods-BrainGamePaymentRN-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN-tvOS.release.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN-tvOS/Pods-BrainGamePaymentRN-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		5FD7BC2F7DCFA059918BB8DC /* libPods-BrainGamePaymentRN-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrainGamePaymentRN-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		65E66B39C20441DDB2681DCA /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		7EFBEAD86452DD3D30CDF7A1 /* Pods-BrainGamePaymentRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN.debug.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN/Pods-BrainGamePaymentRN.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BrainGamePaymentRN/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		999A6C8BA93947AFA8A98CE8 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		9BD13FAB296F4A9686B1F4E7 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
-		A132F80B7F1145CFB38CDDD9 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		A858FD37D93558162F5D70FF /* libPods-BrainGamePaymentRN.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrainGamePaymentRN.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B678ADAABC504A76A51C6B88 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		B9394CA7F9E5A83DCB19C4C7 /* libPods-BrainGamePaymentRN-BrainGamePaymentRNTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrainGamePaymentRN-BrainGamePaymentRNTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A8C565373D4B5232A38375 /* Pods-BrainGamePaymentRN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN.release.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN/Pods-BrainGamePaymentRN.release.xcconfig"; sourceTree = "<group>"; };
 		C988C28ADEE1BFBC75692FCE /* libPods-BrainGamePaymentRN-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BrainGamePaymentRN-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAA66065C2624B8F8A51F273 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		D6EF2451914E1B1FB1F62A56 /* Pods-BrainGamePaymentRN-BrainGamePaymentRNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN-BrainGamePaymentRNTests.debug.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN-BrainGamePaymentRNTests/Pods-BrainGamePaymentRN-BrainGamePaymentRNTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E6D93D49984F45CE9CCF636A /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F7E8BA39FABCD01B5B0220CE /* Pods-BrainGamePaymentRN-BrainGamePaymentRNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainGamePaymentRN-BrainGamePaymentRNTests.release.xcconfig"; path = "Target Support Files/Pods-BrainGamePaymentRN-BrainGamePaymentRNTests/Pods-BrainGamePaymentRN-BrainGamePaymentRNTests.release.xcconfig"; sourceTree = "<group>"; };
-		F9142021C8BB4154B7065688 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
-		FBA73D35D72A4DBD883E1646 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +161,6 @@
 				452DBD49983D530522F44F39 /* Pods-BrainGamePaymentRN-tvOSTests.debug.xcconfig */,
 				07284A59FF7FD5817B42F8FD /* Pods-BrainGamePaymentRN-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -223,7 +190,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* BrainGamePaymentRN.app */,
+				13B07F961A680F5B00A75B9A /* Prabhavana.app */,
 				00E356EE1AD99517003FC87E /* BrainGamePaymentRNTests.xctest */,
 				2D02E47B1E0B4A5D006451C7 /* BrainGamePaymentRN-tvOS.app */,
 				2D02E4901E0B4A5D006451C7 /* BrainGamePaymentRN-tvOSTests.xctest */,
@@ -234,25 +201,8 @@
 		A9EB646F17B74E21933D2825 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E6D93D49984F45CE9CCF636A /* AntDesign.ttf */,
-				A132F80B7F1145CFB38CDDD9 /* Entypo.ttf */,
-				CAA66065C2624B8F8A51F273 /* EvilIcons.ttf */,
-				B678ADAABC504A76A51C6B88 /* Feather.ttf */,
-				F9142021C8BB4154B7065688 /* FontAwesome.ttf */,
-				30C0FB0C7E8B4C0889000EC9 /* FontAwesome5_Brands.ttf */,
-				05D01649C5074A41A7104C3B /* FontAwesome5_Regular.ttf */,
-				1FCC738699CC43278BB5A3FE /* FontAwesome5_Solid.ttf */,
-				415E32AF2D2D465684DB6BA8 /* Fontisto.ttf */,
-				25B2A83780C14729A7508BA2 /* Foundation.ttf */,
-				3B91BF47BEB6456A922DAD72 /* Ionicons.ttf */,
-				0EFF3CA3FA914AC5B5AF644D /* MaterialCommunityIcons.ttf */,
-				999A6C8BA93947AFA8A98CE8 /* MaterialIcons.ttf */,
-				FBA73D35D72A4DBD883E1646 /* Octicons.ttf */,
-				9BD13FAB296F4A9686B1F4E7 /* SimpleLineIcons.ttf */,
-				65E66B39C20441DDB2681DCA /* Zocial.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +248,7 @@
 			);
 			name = BrainGamePaymentRN;
 			productName = BrainGamePaymentRN;
-			productReference = 13B07F961A680F5B00A75B9A /* BrainGamePaymentRN.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* Prabhavana.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2D02E47A1E0B4A5D006451C7 /* BrainGamePaymentRN-tvOS */ = {
@@ -353,6 +303,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 442RFMUC5B;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -401,22 +352,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				50B46AFC8CD144D0919FDACC /* AntDesign.ttf in Resources */,
-				D194DEFF13E7450AB3A14210 /* Entypo.ttf in Resources */,
-				CF2A1C563C424D1D981579DC /* EvilIcons.ttf in Resources */,
-				8080CAD0170B46099C14BB37 /* Feather.ttf in Resources */,
-				BC2AAAC9B7AE4ADBAFB56180 /* FontAwesome.ttf in Resources */,
-				E92E1DF57389492C847DEF53 /* FontAwesome5_Brands.ttf in Resources */,
-				6D2E91B89C6B4F409428E0D5 /* FontAwesome5_Regular.ttf in Resources */,
-				460DCD2D0659416EA4A937B5 /* FontAwesome5_Solid.ttf in Resources */,
-				0797CC41419E4C64AFE0D088 /* Fontisto.ttf in Resources */,
-				490D61EBB7A14DAAA0FAD18E /* Foundation.ttf in Resources */,
-				638EF51BFDFD459988AB1E24 /* Ionicons.ttf in Resources */,
-				FC6FB6F54C2840DC972A052F /* MaterialCommunityIcons.ttf in Resources */,
-				9CDD9260220D4BB8A35622B5 /* MaterialIcons.ttf in Resources */,
-				EE2AE874A7D44630A95F6A4A /* Octicons.ttf in Resources */,
-				8D94E0216F3F49AEA1AB36D6 /* SimpleLineIcons.ttf in Resources */,
-				5F1FD693517E4C9DA38CE4B0 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +430,10 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_bold.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_light.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_semibold.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
@@ -515,6 +454,10 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_bold.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_light.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_semibold.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
@@ -623,6 +566,10 @@
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_bold.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_light.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/opensans_semibold.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
@@ -643,6 +590,10 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_bold.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_light.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/opensans_semibold.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
@@ -835,6 +786,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 442RFMUC5B;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BrainGamePaymentRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -843,8 +795,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BrainGamePaymentRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tutist.prabhavana;
+				PRODUCT_NAME = Prabhavana;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -858,6 +810,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 442RFMUC5B;
 				INFOPLIST_FILE = BrainGamePaymentRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -865,8 +818,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = BrainGamePaymentRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tutist.prabhavana;
+				PRODUCT_NAME = Prabhavana;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

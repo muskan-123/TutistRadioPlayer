@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, StyleSheet, FlatList, Dimensions} from 'react-native';
+import {View, StyleSheet, FlatList, Dimensions, Pressable} from 'react-native';
 
 import constant from '../../Constants/constant';
 import Cart from '../../Components/UI/CartItem';
 import {walletArray} from '../../Model/ModelData';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 
 const WalletScreen = (props) => {
   const cartSelectionHandler = (id) => {
@@ -29,11 +30,13 @@ const WalletScreen = (props) => {
   const renderList = (Item) => {
     console.log('Item is', Item);
     return (
-      <Cart
-        icon={Item.item.icon}
-        title={Item.item.title}
-        selectHandler={cartSelectionHandler.bind(this, Item.item.id)}
-      />
+      <Pressable onPress = {() => props.navigation.navigate(constant.Navigation.webScreen, {title: Item.item.title, url: Item.item.url})}>
+        <Cart
+          icon={Item.item.icon}
+          title={Item.item.title}
+          selectHandler={cartSelectionHandler.bind(this, Item.item.id)}
+        />
+      </Pressable>
     );
   };
 
@@ -43,6 +46,7 @@ const WalletScreen = (props) => {
         data={walletArray}
         keyExtractor={(item) => item.id.toString()}
         renderItem={renderList}
+        ItemSeparatorComponent={() =><View style = {{height: 1, backgroundColor: '#ddd'}}></View>}
         contentContainerStyle={styles.flatlist}
       />
     </View>

@@ -1,8 +1,9 @@
 export class WalletData {
-    constructor(icon = null, title, id) {
+    constructor(icon = null, title, id, url) {
         this.icon = icon,
         this.title = title,
-        this.id = id
+        this.id = id,
+        this.url = url
     }
 }
 

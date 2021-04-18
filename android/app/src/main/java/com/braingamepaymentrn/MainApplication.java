@@ -5,6 +5,7 @@ import android.content.Context;
 import com.razorpay.rn.RazorpayPackage;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativecommunity.slider.ReactSliderPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactInstanceManager;

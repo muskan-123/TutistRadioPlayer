@@ -20,9 +20,9 @@ export default function Controller({onNext, onPrv, isPrv, isNext}) {
     console.log('Player State', playbackState);
 
     //set the player state
-    if (playbackState == 3) {
+    if (playbackState == "playing") {
       isPlaying.current = 'playing';
-    } else if (playbackState == 2) {
+    } else if (playbackState == "paused") {
       isPlaying.current = 'paused';
     } else {
       isPlaying.current = 'loading';
@@ -37,7 +37,7 @@ export default function Controller({onNext, onPrv, isPrv, isNext}) {
       case 'paused':
         return <Icon color="black" name="play-arrow" size={45} />;
       default:
-        return <ActivityIndicator size={45} color="black" />;
+        return <Icon color="black" name="pause" size={45} />;
     }
   };
 

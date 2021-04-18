@@ -1,19 +1,20 @@
 import {WalletData, RequestFund} from './modelClass';
 
 export const walletArray = [
-  new WalletData(
-    require('../Screens/assets/language.png'),
-    'Change Language',
-    0,
-  ),
+  // new WalletData(
+  //   require('../Screens/assets/language.png'),
+  //   'Change Language',
+  //   0,
+  // ),
   new WalletData(
     require('../Screens/assets/createchannel.png'),
     'Create your channel',
     1,
+    'https://docs.tutist.com/prabhavana/create-your-channel/'
   ),
-  new WalletData(require('../Screens/assets/faq.png'), 'FAQs', 2),
-  new WalletData(require('../Screens/assets/about.png'), 'About Us', 3),
-  new WalletData(require('../Screens/assets/contactus.png'), 'Contact Us', 3),
+  new WalletData(require('../Screens/assets/faq.png'), 'FAQs', 2, 'https://docs.tutist.com/prabhavana/faqs/'),
+  new WalletData(require('../Screens/assets/about.png'), 'About Us', 3, 'https://docs.tutist.com/prabhavana/about-us/'),
+  new WalletData(require('../Screens/assets/contactus.png'), 'Contact Us', 4, 'https://docs.tutist.com/prabhavana/contact-us/'),
 ];
 
 export const HistoryArray = [
@@ -42,6 +43,22 @@ export const ProfileArray = [
     url: 'http://35.154.213.13:8000/jain-bhajan',
   },
 ];
+
+export const bannerArray = [
+  {
+    "id": 1,
+    "image": "http://35.154.213.13:9191/navkar_mantra.jpg"
+  },
+  {
+    "id": 2,
+    "image": "http://35.154.213.13:9191/navkar_mantra.jpg"
+  },
+  {
+    "id": 3,
+    "image": "http://35.154.213.13:9191/navkar_mantra.jpg"
+  }
+];
+
 export const generateMpin = [
   new WalletData(require('../assets/user.png'), 'Change Mpin', 0),
   new WalletData(require('../assets/user.png'), 'Generate MPIN', 1),

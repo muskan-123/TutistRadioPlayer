@@ -7,6 +7,7 @@ import {
   Text,
   SafeAreaView,
   Image,
+  Pressable,
 } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import constant from '../../Constants/constant';
@@ -85,17 +86,22 @@ const Channels = (props) => {
     <View style={styles.container}>
       <FlatList
         style={styles.flatlist}
-        data={ProfileArray}
+        data={props.channelList}
         keyExtractor={(item, index) => index}
-        renderItem={({item}) => (
-          <View
+        renderItem={({item, index}) => (
+          <Pressable
+            onPress = {() => {
+              props.setChannel(index);
+              props.setTab('Radio');
+            }}
             style={{
               height: 250,
               backgroundColor: 'white',
-              marginVertical: 20,
-              elevation: 5,
+              marginVertical: 10,
               borderRadius: 5,
               marginHorizontal: 10,
+              borderWidth: 1,
+              borderColor: '#ccc'
             }}>
             <View style={{height: '80%', borderRadius: 5}}>
               <Image
@@ -113,7 +119,7 @@ const Channels = (props) => {
               }}>
               <Text style={{color: 'black'}}>{item.name}</Text>
             </View>
-          </View>
+          </Pressable>
         )}
       />
     </View>
@@ -135,7 +141,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     marginTop: 10,
-    paddingBottom: 100,
+    marginBottom: 50,
   },
   leftHeaderView: {
     flexDirection: 'row',
