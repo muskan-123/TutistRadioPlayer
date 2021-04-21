@@ -117,8 +117,35 @@ export default function PlayerScreen(props) {
             Capability.SkipToPrevious,
           ],
         });
+        TrackPlayer.addEventListener('playback-metadata-received', async (e) => {
+          const currentTrack = await TrackPlayer.getCurrentTrack();
+          if (Platform.OS === 'android') {
+            TrackPlayer.updateMetadataForTrack(currentTrack, {
+              title: e.title,
+              artist: e.artist,
+            });
+            this.setState({
+              currentTitle: e.title || 'Innersong Radio',
+              currentArtist: e.artist || 'Live radio',
+            });
+          } else if (Platform.OS === 'ios') {
+            let step1 = e.title;
+            let step2 = step1.split('-');
+            let artist = step2.shift();
+            let title = step2.join('-');
+            console.log("----title----", artist, title);
+            TrackPlayer.updateMetadataForTrack(currentTrack, {
+              title: title,
+              artist: artist,
+            });
+            // this.setState({
+            //   currentTitle: title || 'Innersong Radio',
+            //   currentArtist: artist || 'Live radio',
+            // });
+          }
+        });
      // }
-    }, [1]);
+    }, []);
   });
 
   const renderItem = ({index, item}) => {
