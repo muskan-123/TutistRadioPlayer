@@ -12,9 +12,11 @@ export const walletArray = [
     1,
     'https://docs.tutist.com/prabhavana/create-your-channel/'
   ),
-  new WalletData(require('../Screens/assets/faq.png'), 'FAQs', 2, 'https://docs.tutist.com/prabhavana/faqs/'),
-  new WalletData(require('../Screens/assets/about.png'), 'About Us', 3, 'https://docs.tutist.com/prabhavana/about-us/'),
-  new WalletData(require('../Screens/assets/contactus.png'), 'Contact Us', 4, 'https://docs.tutist.com/prabhavana/contact-us/'),
+  new WalletData(require('../Screens/assets/privacy_policy.png'), 'Privacy Policy', 2, 'https://docs.tutist.com/prabhavana/privacy-policy/'),
+  new WalletData(require('../Screens/assets/terms_conditions.png'), 'Terms and Conditions', 3, 'http://docs.tutist.com/prabhavana/terms-and-conditions/'),
+  new WalletData(require('../Screens/assets/faq.png'), 'FAQs', 4, 'http://docs.tutist.com/prabhavana/faqs/'),
+  new WalletData(require('../Screens/assets/about.png'), 'About Us', 5, 'https://docs.tutist.com/prabhavana/about-us/'),
+  new WalletData(require('../Screens/assets/contactus.png'), 'Contact Us', 6, 'https://docs.tutist.com/prabhavana/contact-us/'),
 ];
 
 export const HistoryArray = [

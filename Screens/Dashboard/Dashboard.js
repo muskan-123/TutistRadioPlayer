@@ -8,6 +8,8 @@ import {
   Dimensions,
   Image,
   SafeAreaView,
+  Touchable,
+  Share,
 } from 'react-native';
 import Channels from '../Profile/Channels';
 import Wallet from '../Wallet/Wallet';
@@ -15,6 +17,7 @@ import Radio from './Radio';
 import {FontAwesome5, MaterialCommunityIcons} from '@expo/vector-icons';
 import constant from '../../Constants/constant';
 import {Header} from 'react-native/Libraries/NewAppScreen';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const DashboardScreen = (props) => {
   const [selectedTab, setSelectedTab] = useState('Radio');
@@ -32,7 +35,25 @@ const DashboardScreen = (props) => {
     console.log(bannerList);
   }
 
-
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message:
+          'Download free Jain radio at https://play.google.com/store/apps/details?id=com.tutist.prabhavana (Android), https://apps.apple.com/us/app/prabhavana/id1561624908 (iOS) and listen Jain bhajan all time.',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // shared with activity type of result.activityType
+        } else {
+          // shared
+        }
+      } else if (result.action === Share.dismissedAction) {
+        // dismissed
+      }
+    } catch (error) {
+      alert(error.message);
+    }
+}
 
   const flatlistView = (props) => {
     if (channelList.length > 0 && bannerList.length > 0) {
@@ -74,6 +95,37 @@ const DashboardScreen = (props) => {
             ? 'CHANNELS'
             : 'SETTINGS'}
         </Text>
+        {selectedTab == 'Radio' ?
+        <View style={{
+          width: 50,
+          height: 50,
+          position: "absolute",
+          alignItems:'center',
+          justifyContent:"center",
+          right: 0
+        }}>
+          <TouchableOpacity
+        style={{
+          width: 50,
+          height: 50,
+          alignSelf:"center",
+          alignItems:"center",
+          justifyContent:"center"
+        }}
+        onPress={onShare}
+        >
+        <Image
+        source={require('../assets/share.png')}
+        style={{
+          width: 30,
+          height: 30,
+          resizeMode: "contain",
+          alignSelf:"center",
+        }}
+        resizeMode="cover"
+      />
+      </TouchableOpacity>
+        </View>:null}
       </View>
     );
   };

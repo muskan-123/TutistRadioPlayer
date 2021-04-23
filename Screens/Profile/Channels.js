@@ -115,9 +115,22 @@ const Channels = (props) => {
               style={{
                 height: '20%',
                 alignItems: 'center',
-                justifyContent: 'center',
+                justifyContent: 'space-around',
+                flexDirection: 'row',
+                flex: 1
               }}>
-              <Text style={{color: 'black'}}>{item.name}</Text>
+              <Text style={{color: 'black',textAlign:'center'}}>{item.name}</Text>
+              <Image
+                source={require('../assets/play_button.png')}
+                style={{
+                  width: 30,
+                  height: 30,
+                  resizeMode: "contain",
+                  position: "absolute",
+                  right: 12
+                }}
+                resizeMode="cover"
+              />
             </View>
           </Pressable>
         )}
