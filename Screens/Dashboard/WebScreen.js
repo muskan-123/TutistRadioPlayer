@@ -23,8 +23,9 @@ export default WebScreen = ({navigation, route}) => {
   console.log(route);
   return (
     <>
-      <SafeAreaView
-        style={{
+      <SafeAreaView 
+        >
+          <View style={{
           flexDirection: 'row',
           backgroundColor: 'white',
           height: 55,
@@ -32,12 +33,13 @@ export default WebScreen = ({navigation, route}) => {
           alignItems: 'center',
           borderBottomWidth: 1,
           borderBottomColor: '#ddd',
+          position: 'relative',
           // shadowColor: 'grey',
           // shadowOpacity: 2,
           // shadowOpacity: 0.7,
           // elevation: 4,
         }}>
-        <Pressable
+          <Pressable
           onPress={() => navigation.goBack()}
           style={{
             position: 'absolute',
@@ -53,6 +55,8 @@ export default WebScreen = ({navigation, route}) => {
           }}>
           {route.params.title}
         </Text>
+            </View>
+        
       </SafeAreaView>
       <WebView source={{ uri: route.params.url}} />
     </>

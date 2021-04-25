@@ -117,34 +117,42 @@ export default function PlayerScreen(props) {
             Capability.SkipToPrevious,
           ],
         });
-        TrackPlayer.addEventListener('playback-metadata-received', async (e) => {
-          const currentTrack = await TrackPlayer.getCurrentTrack();
-          if (Platform.OS === 'android') {
-            TrackPlayer.updateMetadataForTrack(currentTrack, {
-              title: e.title,
-              artist: e.artist,
-            });
-            this.setState({
-              currentTitle: e.title || 'Innersong Radio',
-              currentArtist: e.artist || 'Live radio',
-            });
-          } else if (Platform.OS === 'ios') {
-            let step1 = e.title;
-            let step2 = step1.split('-');
-            let artist = step2.shift();
-            let title = step2.join('-');
-            console.log("----title----", artist, title);
-            TrackPlayer.updateMetadataForTrack(currentTrack, {
-              title: title,
-              artist: artist,
-            });
-            // this.setState({
-            //   currentTitle: title || 'Innersong Radio',
-            //   currentArtist: artist || 'Live radio',
-            // });
-          }
-        });
+        // TrackPlayer.addEventListener('playback-metadata-received', async (e) => {
+        //   const currentTrack = await TrackPlayer.getCurrentTrack();
+        //   if (Platform.OS === 'android') {
+        //     TrackPlayer.updateMetadataForTrack(currentTrack, {
+        //       title: e.title,
+        //       artist: e.artist,
+        //     });
+        //     this.setState({
+        //       currentTitle: e.title || 'Innersong Radio',
+        //       currentArtist: e.artist || 'Live radio',
+        //     });
+        //   } else if (Platform.OS === 'ios') {
+        //     let step1 = e.title;
+        //     let step2 = step1.split('-');
+        //     let artist = step2.shift();
+        //     let title = step2.join('-');
+        //     console.log("----title----", artist, title);
+        //     TrackPlayer.updateMetadataForTrack(currentTrack, {
+        //       title: title,
+        //       artist: artist,
+        //     });
+        //     // this.setState({
+        //     //   currentTitle: title || 'Innersong Radio',
+        //     //   currentArtist: artist || 'Live radio',
+        //     // });
+        //   }
+        // });
      // }
+     TrackPlayer.addEventListener('remote-play', (e) => {
+      this.setState({audioStatus: false});
+      TrackPlayer.play();
+    });
+    TrackPlayer.addEventListener('remote-pause', () => {
+      this.setState({audioStatus: true});
+      TrackPlayer.stop();
+    });
     }, []);
   });
 
@@ -173,7 +181,7 @@ export default function PlayerScreen(props) {
           }}>
 
         </Animated.View> */}
-      <View style={{height: height * 0.4, marginTop: 10}}>
+      <View style={{height: height * 0.4, marginTop: 0}}>
         <FlatListSlider
           contentContainerStyle={{height: height * 0.4}}
           data={props.bannerList}
@@ -181,8 +189,9 @@ export default function PlayerScreen(props) {
           onPress={() => null}
         />
       </View>
+      <Text style={styles.description}>{songs[currentIndex].description}</Text>
       <Image
-        style={{height: height * 0.1, marginTop: height * 0.05}}
+        style={{height: height * 0.1}}
         source={require('../assets/imgpsh_fullsize_anim.gif')}
       />
       {songs.length > 0 ? (
@@ -216,6 +225,16 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textTransform: 'capitalize',
     color: 'black',
+  },
+  description: {
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: '600',
+    textTransform: 'capitalize',
+    color: 'black',
+    marginTop: 20,
+    marginLeft:12,
+    marginRight:12,
   },
   artist: {
     fontSize: 18,
