@@ -132,7 +132,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.braingamepaymentrn"
+        applicationId 'com.tutist.prabhavana'
         minSdkVersion 21
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
